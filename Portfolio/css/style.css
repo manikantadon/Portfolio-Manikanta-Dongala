@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f7f7f7, #e0f7fa);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  color: #0288d1;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+  background: linear-gradient(90deg, #0288d1, #03a9f4);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s, background 0.5s;
+}
+
+nav ul li a:hover {
+  background: linear-gradient(90deg, #ffca28, #ffeb3b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Home Section */
+#home {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  padding: 100px 20px;
+}
+
+#home h1 {
+  font-size: 48px;
+  animation: fadeIn 2s ease-in;
+}
+
+#home p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #555;
+  animation: slideIn 1.5s ease-out;
+}
+
+/* Projects Section */
+.project {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(90deg, #0288d1, #03a9f4);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0277bd, #039be5);
+}
+
+/* Skills Section */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  background: linear-gradient(90deg, #0288d1, #03a9f4);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#skills ul li:hover {
+  background: linear-gradient(90deg, #0277bd, #039be5);
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+/* Contact Section */
+#contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Image Hover Effect */
+.profile-pic-home,
+.profile-pic-about {
+  width: 200px; /* Adjust the size as needed */
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic-home:hover,
+.profile-pic-about:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  margin: auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Scroll Progress Indicator */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(to right, #ffca28, #ffeb3b);
+  z-index: 999;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+nav ul li a i {
+  margin-left: 10px; /* Space between text and icon */
+  font-size: 18px; /* Size of the icons */
+  transition: color 0.3s;
+}
+
+nav ul li a:hover i {
+  color: #ffca28; /* Change icon color on hover */
+}
